@@ -64,12 +64,32 @@ h6 {
 /*
   My CSS
 */
+button {
+    all: unset; /* Resets all properties to their initial state */
+    background: transparent; /* Removes background */
+    border: none; /* Removes border */
+    padding: 0; /* Removes default padding */
+    font: inherit; /* Inherit font properties from parent element */
+}
 .icons {
     display: inline;
     width: 30px;
     height: 30px;
     margin-right: 10px;
     fill: white;
+}
+.icons-2 {
+    display: inline;
+    width: 32px;
+    height: 32px;
+    fill: black;
+    transition: all 0.7s;
+}
+
+.icons-2:hover {
+    fill: #3b82f6;
+    /* transition: all 0.75s; */
+    transform: rotate(360deg);
 }
 
 li {
@@ -90,6 +110,10 @@ a:hover {
     padding-left: 10px;
 }
 
+header a:hover {
+    padding: 0;
+}
+
 a:hover {
     text-decoration: none;
     color: inherit;
@@ -97,7 +121,7 @@ a:hover {
 
 ul {
     list-style: none;
-    margin: 0;
+    margin: 0px 10px;
     padding: 0;
 }
 
@@ -106,42 +130,57 @@ ul {
 }
 
 body {
+    overflow-x: hidden;
     display: grid;
     min-height: 1vh;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 120px minmax(100vh, 1fr) 50px;
+    grid-template-rows: 75px 80px minmax(100vh, 1fr) 50px;
 }
 
 header {
-    background-color: white;
     grid-area: 1 / 2 / 2 / 3;
-
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding: 0px 10px;
 }
 
-header > div {
+header,
+#welcome {
+    background-color: white;
     display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 10px 10px 30px;
 }
-header > div > input,
-header > div > h1 {
+
+header div,
+#welcome h1 {
     flex: 1;
 }
 
-input {
-    margin: 10px;
+header ul,
+#welcome ul {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header div ul {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+#welcome {
+    grid-area: 2 / 2 / 3 / 3;
+
+    position: sticky;
+    top: 0;
+}
+
+#welcome a {
+    border: 4px solid #3b82f6;
+    border-radius: 50px;
+    padding: 2px 15px;
+    background-color: transparent;
 }
 
 main {
     background-color: lightgray;
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 3 / 2 / 4 / 3;
+    height: 400vh;
 }
 
 aside {
@@ -153,6 +192,7 @@ aside {
     flex-direction: column;
     gap: 10px;
     padding: 15px;
+    padding-right: 5px;
 
     position: fixed;
     width: 250px;
@@ -166,6 +206,8 @@ aside a {
 .sidebar-dashboard {
     display: flex;
     align-items: center;
+
+    margin-bottom: 20px;
 }
 .sidebar-dashboard a {
     flex: 1;
@@ -183,6 +225,7 @@ aside a {
 }
 
 aside > div ul {
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -190,5 +233,5 @@ aside > div ul {
 
 footer {
     background-color: lightgray;
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 4 / 2 / 5 / 3;
 }
