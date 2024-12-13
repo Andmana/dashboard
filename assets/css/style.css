@@ -80,6 +80,7 @@ body {
 
 p {
     color: var(--font2-color);
+    font-size: 0.75rem;
 }
 
 button {
@@ -231,7 +232,7 @@ main {
     grid-auto-rows: 250px;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .project {
@@ -278,12 +279,24 @@ main {
 
 .description {
     color: black;
+    -webkit-text-stroke-width: 0.1mm;
+    -webkit-text-stroke-color: white;
     position: absolute;
     width: 100%;
     top: 80%;
     left: 0;
     padding: 20px 10px 5px;
     transition: all 0.4s ease;
+}
+
+ p {
+    width: 100%;
+    display: -webkit-box;  /* Enables flexbox-like behavior for text */
+    -webkit-line-clamp: 2;  /* Limits the text to 2 lines */
+    -webkit-box-orient: vertical; /* Defines the box's orientation */
+    overflow: hidden;  /* Hides the overflowed text */
+    text-overflow: ellipsis;  /* Adds ellipsis at the end of the truncated text */
+      
 }
 
 .description * {
@@ -295,11 +308,13 @@ main {
 }
 
 .project:hover .description {
+    -webkit-text-stroke-width: unset;
+    -webkit-text-stroke-color: unset;
     top: unset;
     color: white;
     bottom: -15px;
     transform: translateY(-10px);
-    box-shadow: rgba(0, 0, 0, 0.618) 0px -100px 36px -28px inset;
+    box-shadow: rgba(0, 0, 0, 0.618) 0px -80px 36px -10px inset;
     transition: all 0.4s ease;
 }
 
@@ -344,16 +359,13 @@ main {
     margin: 10px 0px;
 }
 
-p {
-    font-size: 0.75rem;
-}
 
 .bar {
     display: block;
     position: relative;
     left: -5%;
     width: 110%;
-    margin: 15px 0 20px 0;
+    margin: 5px 0 10px 0;
     border-bottom: 2px solid grey;
 }
 .trending .card {
