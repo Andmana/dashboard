@@ -65,8 +65,8 @@
 }
 
 #moon {
-    fill: cyan;
-    background-color: rgba(255, 255, 255, 0.474);
+    fill: rgba(0, 255, 255, 0.36);
+    background-color: rgba(255, 255, 255, 0.238);
     border-radius: 50%; /* Makes the box a circle */
-    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.121); /* Inline shadow effect */
+    box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.121); /* Inline shadow effect */
 }

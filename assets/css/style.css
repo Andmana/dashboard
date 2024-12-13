@@ -64,6 +64,24 @@ h6 {
 /*
   My CSS
 */
+
+:root {
+    --bg-color: white;
+    --bg2-color : lightgray;
+    --font-color: black;
+    --font2-color: #1e293b;
+    --primary-color: #3b82f6;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+p {
+    color: var(--font2-color);
+}
+
 button {
     all: unset; /* Resets all properties to their initial state */
     background: transparent; /* Removes background */
@@ -76,18 +94,18 @@ button {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    fill: white;
+    fill: var(--font-color);
 }
 .icons-2 {
     display: inline;
     width: 32px;
     height: 32px;
-    fill: black;
+    fill: var(--font-color);
     transition: all 0.7s;
 }
 
 .icons-2:hover {
-    fill: #3b82f6;
+    fill: var(--primary-color);
     /* transition: all 0.75s; */
     transform: rotate(360deg);
 }
@@ -149,7 +167,7 @@ header {
 
 header,
 #welcome {
-    background-color: white;
+    background-color: var(--bg-color);
     display: flex;
     align-items: center;
     gap: 20px;
@@ -178,7 +196,7 @@ header ul,
 }
 
 #welcome a {
-    border: 4px solid #3b82f6;
+    border: 4px solid var(--primary-color);
     border-radius: 50px;
     padding: 2px 15px;
     background-color: transparent;
@@ -191,7 +209,7 @@ header ul,
 /* ***************** */
 
 main {
-    background-color: lightgray;
+    background-color: var(--bg2-color);
     grid-area: 3 / 2 / 4 / 3;
 
     display: grid;
@@ -296,6 +314,10 @@ main {
 
 .board {
     grid-column: 2/3;
+    color: var(--font-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .board div h3, .container > h3 {
@@ -309,9 +331,13 @@ main {
 
 .card {
     padding: 1rem 1.7rem;
-    background-color: white;
+    background-color: var(--bg-color);
     margin-bottom: 5px;
     border-radius: 10px;
+
+    display: grid;
+    grid-column: 1fr;
+    gap: 5px;
 }
 
 .card-item {
@@ -373,8 +399,8 @@ p {
 /* ***************** */
 
 aside {
-    background-color: #3b82f6;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--font-color);
     grid-area: 1 / 1 / 4 / 2;
 
     display: flex;
@@ -427,6 +453,6 @@ aside > div ul {
 /* ***************** */
 
 footer {
-    background-color: lightgray;
+    background-color: var(--bg-color);
     grid-area: 4 / 2 / 5 / 3;
 }
