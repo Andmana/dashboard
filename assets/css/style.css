@@ -345,6 +345,8 @@ main {
 }
 
 .card {
+    max-height: 250px;
+    overflow-y: scroll;
     padding: 1rem 1.7rem;
     background-color: var(--bg-color);
     margin-bottom: 5px;
@@ -374,12 +376,12 @@ main {
 
 .card-item2 {
     display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows:  repeat(2, 50px);
     column-gap: 5px;
     row-gap: 2px;
 
-    margin: 15px 0 10px;
+    margin: 0;
 }
 
 .card-item2 img {
@@ -433,17 +435,18 @@ aside a {
 .sidebar-dashboard {
     display: flex;
     align-items: center;
-
     margin-bottom: 20px;
 }
-.sidebar-dashboard a {
+
+.sidebar-dashboard button {
     flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
-.sidebar-dashboard > svg {
-}
-
-.sidebar-dashboard > svg:hover {
+.sidebar-dashboard > button:hover {
     scale: 1.1;
 }
 

@@ -28,9 +28,7 @@ themeBtn.addEventListener("click", () => {
 });
 
 // On page load
-document.addEventListener("DOMContentLoaded", (event) => {
-    const a = 0;
-});
+document.addEventListener("DOMContentLoaded", (event) => {});
 
 function changeTheme() {
     let rootStyle = getComputedStyle(root);
