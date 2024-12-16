@@ -320,6 +320,8 @@ main {
 
 .project:hover .description *{
     visibility: visible;
+    color: white;
+
 }
 
 
@@ -470,4 +472,9 @@ aside > div ul {
 footer {
     background-color: var(--bg-color);
     grid-area: 4 / 2 / 5 / 3;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
